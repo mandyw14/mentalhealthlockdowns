@@ -1,5 +1,5 @@
 # mentalhealthlockdowns
-Evaluating the Impact of Lockdowns on Mental Health: A Data Science Approach
+**Evaluating the Impact of Lockdowns on Mental Health: A Data Science Approach**
 
 Proposal for the Guelph-Humber Research Fund
 FUNDED: March 2022 - February 2023 
