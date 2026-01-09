@@ -28,43 +28,32 @@ In April 2020, the first version of the Oxford COVID-19 Government Response Trac
 
 ### Dataset 2: COVID-19 Twitter Dataset with Sentiments and Emotions Attributes  
 
-CrystalFeel is a validated text-based sentiment analysis tool created by Yingpin Yang and colleagues at the A*STAR Institute of High-Performance Computing in Singapore. Multiple research groups have already used CrystalFeel for COVID-19 sentiment-related research (e.g., 12-15). The tool has been trained to detect the underlying emotions present in short-form text. When a user feeds the CrystalFeel API a piece of text, the algorithm calculates a score for five different emotions present in that text: the level of happiness, sadness, anger, and fear each ranging from zero to one. The higher the score for a given emotion, the more dominant that emotion is in the given piece of text. A “valence” statistic is calculated for a given piece of text as well. Valence denotes if the given piece of text contains a positive, negative, or neutral message; higher scores of valence denote a more positive message, lower scores of valence denote a more negative message, and middle-ranged scores denote a neutral message. In September 2020, the CrystalFeel group published the COVID-19 Twitter Dataset with Latent Topics, Sentiments and Emotions Attributes, a repository of tweets about COVID-19 that have been sentimentally analyzed using CrystalFeel (16). They have since analyzed over 198 million tweets. Their dataset contains tweets published from early-2020 to mid-2022 that contained the hashtags #wuhan, #nCov, #corona, and #covid. Our colleagues at CrystalFeel have provided us access to a version of this dataset specific to Canadian-based COVID-19 tweets (see Table 1). This master dataset contains nine million Canadian tweets that have been analyzed using CrystalFeel. This dataset additionally contains the relative location of each given tweet, which is crucial for our analysis. An example of the dataset can be seen in Table 2.   
+CrystalFeel is a validated text-based sentiment analysis tool created by Yingpin Yang and colleagues at the A*STAR Institute of High-Performance Computing in Singapore. Multiple research groups have already used CrystalFeel for COVID-19 sentiment-related research (e.g., 12-15). The tool has been trained to detect the underlying emotions present in short-form text. When a user feeds the CrystalFeel API a piece of text, the algorithm calculates a score for five different emotions present in that text: the level of happiness, sadness, anger, and fear each ranging from zero to one. The higher the score for a given emotion, the more dominant that emotion is in the given piece of text. A “valence” statistic is calculated for a given piece of text as well. Valence denotes if the given piece of text contains a positive, negative, or neutral message; higher scores of valence denote a more positive message, lower scores of valence denote a more negative message, and middle-ranged scores denote a neutral message. In September 2020, the CrystalFeel group published the COVID-19 Twitter Dataset with Latent Topics, Sentiments and Emotions Attributes, a repository of tweets about COVID-19 that have been sentimentally analyzed using CrystalFeel (16). They have since analyzed over 198 million tweets. Their dataset contains tweets published from early-2020 to mid-2022 that contained the hashtags #wuhan, #nCov, #corona, and #covid. Our colleagues at CrystalFeel have provided us access to a version of this dataset specific to Canadian-based COVID-19 tweets (see Table 1). This master dataset contains nine million Canadian tweets that have been analyzed using CrystalFeel. This dataset additionally contains the relative location of each given tweet, which is crucial for our analysis. An example of the dataset can be seen in Table 2.    
 
-  
+### TABLE 1: Example of Canadian Tweets with Low and High Emotion Scores 
 
-### TABLE 1  
-
-
- 
-
-### TABLE 2
+<img width="737" height="629" alt="Screenshot 2026-01-09 at 9 20 07 AM" src="https://github.com/user-attachments/assets/905445e8-1dc7-427c-ba14-61e5cb98098c" />
 
 
-<img width="484" height="251" alt="Screenshot 2025-12-09 at 11 08 10 AM" src="https://github.com/user-attachments/assets/b0f91b65-6965-435e-bb5d-204c4a08d11b" />
+### TABLE 2: Sample of Master CrystalFeel Dataset for Canada 
 
-<img width="547" height="332" alt="Screenshot 2025-12-09 at 11 09 23 AM" src="https://github.com/user-attachments/assets/9c0c5561-94bd-4a13-83eb-02a520c59576" />
-
-
+<img width="741" height="547" alt="Screenshot 2026-01-09 at 9 21 54 AM" src="https://github.com/user-attachments/assets/68c057b3-5dca-45e1-af1a-aa8b9ff8102a" />
   
 
 ### Dataset 3: COVID-19 Data: Cases, Hospitalizations, and Deaths  
 
 The COVID-19 Canada Open Data Working Group (CCODWG) is an open-source COVID-19 data repository from the University of Toronto (17). The project has compiled much of the official COVID-19 reporting data from the different provinces and territories during the pandemic. Using the CCODWG API, one can access the reported cases, deaths, hospitalizations, ICU administrations, and vaccine statistics for Canada and its regions. Multiple teams have already CCODWG in their Canadian-based COVID-19 research (18,19).   
 
-  
 
 COVID-19 Wave Grouping: During the COVID-19 pandemic, different periods characterized by significant increases and decreases in cases have been referred to as "waves" typically associated with rising cases and the dominant virus strain. Although there are no official wave dates in Canada, six waves are generally recognized by the end of 2022. In this study, we grouped the six waves according to specific dates. The first wave occurred from February 1, 2020, until July 17, 2020. The second wave spanned from July 18, 2020, to March 4, 2021. The third wave started on March 5, 2021, and ended on July 22, 2021. The fourth pandemic wave lasted from July 23, 2021, until November 4, 2021. The fifth wave ran from November 5, 2021, to February 28, 2022. The sixth and final wave, up until our study deadline spanned from March 1, 2022, until June 2, 2022. These periods represent the peak case numbers and the lowest cases before another increase. 
-
-  
 
 Tweet Grouping: We used Python and the Pandas module to analyze the master dataset provided by the CrystalFeel team, creating ten data frames for each Canadian province of interest. The three Canadian territories were excluded due to insufficient data (i.e., too few tweets per day from those regions). We filtered tweets based on keywords related to each province and created an average emotion score for tweets published on the same day. Each data frame was then converted into an Excel file and modified to include only relevant information. Dates with fewer than ten tweets were excluded for each province to avoid skewed results. The total number of tweets obtained for each wave per province is shown in Table 3. 
 
  
 
-### TABLE 3 
+### TABLE 3: Number of COVID-Related Tweets Obtained Per Province and Per Wave  
 
-
- 
+<img width="644" height="501" alt="Screenshot 2026-01-09 at 9 42 11 AM" src="https://github.com/user-attachments/assets/c8f58a49-70f3-4042-877d-be6082dee54e" />
 
 Data Analysis: We used a custom Python script (Python version 3.10) with Pandas, NumPy, and SciPy modules to analyze the data. Pearson correlations were conducted between stringency index and each emotion (Fear, Anger, Sadness, Happiness, and Valence) for each province and wave, with an alpha level set at p < 0.05. We also conducted regression analyses (OLS) with Valence as the dependent variable and four independent variables (OxCGRT lockdown stringency and changes in COVID-19 cases, hospitalizations, and deaths) for each province to allow to determine which COVID-19 variable explained the most variability in the Valence variable for each province. We focused on the T values associated with the beta coefficients and their statistical significance as a measure of each variable’s unique contribution in predicting Valence. 
 
@@ -82,9 +71,16 @@ INSERT FIGURE 1 ABOUT HERE
 
 Table 4 shows the corresponding pearson correlation coefficients between the stringency values and each tweet emotion, for each of the six waves of the pandemic and each province. In the first wave of the pandemic, the correlations between each tweet emotion and stringency were very strong, with statistically significant correlations as high as .91 and never lower than .26. All but three of the 50 correlations were statistically significant (p < 0.05) during wave 1. For correlations that were statistically significant, fear, anger, and sadness were all negatively correlated with stringency, whereas happiness was positively correlated in all provinces, with the exception of Nova Scotia where happiness was negatively correlated. In all provinces, valence was positively correlated (p. < 0.05) with stringency during wave 1.   
 
- 
+ <img width="329" height="416" alt="Screenshot 2026-01-09 at 9 44 48 AM" src="https://github.com/user-attachments/assets/99a0576a-22f5-4078-a140-5ebbd7db0652" />
+
 
 INSERT TABLE 4 ABOUT HERE 
+
+<img width="484" height="251" alt="Screenshot 2025-12-09 at 11 08 10 AM" src="https://github.com/user-attachments/assets/b0f91b65-6965-435e-bb5d-204c4a08d11b" />
+
+<img width="547" height="332" alt="Screenshot 2025-12-09 at 11 09 23 AM" src="https://github.com/user-attachments/assets/9c0c5561-94bd-4a13-83eb-02a520c59576" />
+
+
 
  
 
