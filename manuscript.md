@@ -64,25 +64,49 @@ Data Analysis: We used a custom Python script (Python version 3.10) with Pandas,
 Figure 1 shows the changes in daily tweet sentiment values (for each of the emotions of fear, anger, sadness, happiness, and emotional valence) from February 2020 until June 2022 along with the corresponding daily Stringency values for each Canadian province.  
 
  
+### Figure 1: Tweet Emotional Intensity Scores and Stringency Index from March 2020 until June 2022.  
 
-INSERT FIGURE 1 ABOUT HERE 
+Note: Tweet emotional intensity scores are listed along the primary vertical axis with average stringency along the secondary vertical axis. Changes in these scores are shown over time from March 2020 through until June 2022 for each province (a – j). 
 
- 
+**British Columbia** 
+<img width="2690" height="1256" alt="Figure 1a" src="https://github.com/user-attachments/assets/3e3115fb-8d6b-41a3-b720-bf54b7e8cac5" />
+
+**Alberta**
+<img width="2690" height="1256" alt="Figure 1b" src="https://github.com/user-attachments/assets/8aff6141-d7bb-43a1-a894-88999df42207" />
+
+**Sasktachewan**
+<img width="2690" height="1256" alt="Figure 1c" src="https://github.com/user-attachments/assets/8dcb32dc-ff7d-4980-97eb-babf8f193923" />
+
+**Manitoba**
+<img width="2690" height="1256" alt="Figure 1d" src="https://github.com/user-attachments/assets/fe2d6cf2-944a-4fcc-b2d2-3bad8ffd40cc" />
+
+**Ontario**
+<img width="2690" height="1256" alt="Figure 1e" src="https://github.com/user-attachments/assets/39cda66d-c425-41d0-9d11-9c1e21279312" />
+
+**Quebec**
+<img width="2690" height="1256" alt="Figure 1f" src="https://github.com/user-attachments/assets/a6332a9a-8577-4022-a011-975db22eddc6" />
+
+**New Brunswick**
+<img width="2690" height="1256" alt="Figure 1g" src="https://github.com/user-attachments/assets/977182c7-0a4f-4946-9106-02dcb62491d3" />
+
+**Nova Scotia**
+<img width="2690" height="1256" alt="Figure 1h" src="https://github.com/user-attachments/assets/87faa4b4-208b-41f4-ba19-4e59f28f31ad" />
+
+**Newfoundland**
+<img width="2690" height="1256" alt="Figure 1i" src="https://github.com/user-attachments/assets/eb28ef84-9216-4f82-8b19-b94746bf3ec1" />
 
 Table 4 shows the corresponding pearson correlation coefficients between the stringency values and each tweet emotion, for each of the six waves of the pandemic and each province. In the first wave of the pandemic, the correlations between each tweet emotion and stringency were very strong, with statistically significant correlations as high as .91 and never lower than .26. All but three of the 50 correlations were statistically significant (p < 0.05) during wave 1. For correlations that were statistically significant, fear, anger, and sadness were all negatively correlated with stringency, whereas happiness was positively correlated in all provinces, with the exception of Nova Scotia where happiness was negatively correlated. In all provinces, valence was positively correlated (p. < 0.05) with stringency during wave 1.   
 
- <img width="329" height="416" alt="Screenshot 2026-01-09 at 9 44 48 AM" src="https://github.com/user-attachments/assets/99a0576a-22f5-4078-a140-5ebbd7db0652" />
+### TABLE 4: Correlation coefficients between lockdown stringency and each emotion.  
 
 
-INSERT TABLE 4 ABOUT HERE 
-
-<img width="484" height="251" alt="Screenshot 2025-12-09 at 11 08 10 AM" src="https://github.com/user-attachments/assets/b0f91b65-6965-435e-bb5d-204c4a08d11b" />
-
-<img width="547" height="332" alt="Screenshot 2025-12-09 at 11 09 23 AM" src="https://github.com/user-attachments/assets/9c0c5561-94bd-4a13-83eb-02a520c59576" />
-
-
-
+<img width="250" height="390" alt="Screenshot 2026-01-09 at 9 52 10 AM" src="https://github.com/user-attachments/assets/730bbc6a-071e-4633-a029-9b8b61f19f7e" />
  
+<img width="250" height="395" alt="Screenshot 2026-01-09 at 9 52 46 AM" src="https://github.com/user-attachments/assets/a53c359e-d7b3-428a-820a-db2c5816f6c8" />
+
+<img width="250" height="390" alt="Screenshot 2026-01-09 at 9 56 08 AM" src="https://github.com/user-attachments/assets/6ac95288-a073-41fd-8170-73dced68a45b" />
+
+
 
 As seen in the correlation table, the correlations between stringency and each tweet emotion were significantly lower in subsequent waves of the pandemic. For example, correlation coefficients were never higher than .58 and rarely higher than .40.  
 
@@ -90,7 +114,12 @@ For subsequent waves of the pandemic (waves 2 – 6), in general correlations we
 
 The results of our regression analyses for wave 1 are presented in Table 5a and subsequent waves are presented in Table 5b. The results of the regression analysis for wave 1 show that in every province stringency was the strongest, and often the only, significant predictor of valance. In some provinces (BC, SK, ON, NS), other COVID-19 variables were also significant predictors of valence in wave 1 but the T value for stringency was always greater. 
 
-INSERT TABLE 5 ABOUT HERE 
+### TABLE 5: T values from the Regression Analysis for each Predictor Variable   
+
+<img width="484" height="251" alt="Screenshot 2025-12-09 at 11 08 10 AM" src="https://github.com/user-attachments/assets/b0f91b65-6965-435e-bb5d-204c4a08d11b" />
+
+<img width="547" height="332" alt="Screenshot 2025-12-09 at 11 09 23 AM" src="https://github.com/user-attachments/assets/9c0c5561-94bd-4a13-83eb-02a520c59576" />
+
 
 In order to reduce the number of regression analyses conducted, we only conducted regression analyses on waves 2 through 6 when a statistically significant correlation was observed between stringency and valence. The analyses of these results show that in subsequent waves of the pandemic, stringency was not as strong of a predictor of valence as it was during wave 1 for all provinces. However, in Alberta, New Brunswick, and Prince Edward Island, stringency continued to account for the variability in valence (p < 0.05) to a greater extent than other COVID-19 variables of vases, hospitalizations, or deaths. In contrast, in Saskatchewan, Manitoba, Ontario, Quebec, and Nova Scotia, stringency no longer accounted for the most amount of variability in valence, (p > 0.05). In all of those provinces, with the exception of Quebec, COVID-19 Cases was the greatest predictor of valence. In Quebec, Deaths was the greatest predictor of valence.  
 
@@ -114,3 +143,45 @@ Our observed province-specific differences in emotional response also beg furthe
 
 ## Conclusion 
 Overall, our results indicate that drastic, population-level policy changes and restrictions imposed in the first wave of COVID-19 were met favorably and equally by Canadians across all provinces according to the sentiment analysis conducted in COVID-related tweets. However, after the initial wave, the positive emotional responses were weaker and, in some provinces, became negative. Few studies have assessed the impacts of COVID-19 public health measures on populations past the early phase of the pandemic; in studies that have, even fewer used the wave-based analysis that we employed. Our results are important because they show that varied regional emotional responses to the COVID-19 restrictions were detectable using Twitter throughout the pandemic and could be used in the future for ongoing and live monitoring of emotional responses to public health measures particularly during ongoing health emergencies.  
+
+## ​​References 
+
+​1. Hale T, Angrist N, Goldszmidt R, Kira B, Petherick A, Phillips T, et al. A global panel database of pandemic policies (Oxford COVID-19 Government Response Tracker). Nat Hum Behav. 2021 Apr;5(4):529–38.  
+
+​2. Gupta RK, Yang Y. CrystalFeel at SemEval-2018 Task 1: Understanding and Detecting Emotion Intensity using Affective Lexicons. In: Proceedings of The 12th International Workshop on Semantic Evaluation [Internet]. New Orleans, Louisiana: Association for Computational Linguistics; 2018 [cited 2022 Jul 5]. p. 256–63. Available from: https://aclanthology.org/S18-1038 
+
+​3. Li D, Wang Y, Madden A, Ding Y, Tang J, Sun GG, Zhang N, Zhou E. Analyzing stock market trends using social media user moods and social influence. Journal of the Association for Information Science and Technology. 2019;70:1000-13. Available from: https://doi.org/10.1002/asi.24173 
+
+​4. Xiang N, Wang L, Zhong S, Zheng C, Wang B, Qu Q. How Does the World View China’s Carbon Policy? A Sentiment Analysis on Twitter Data. Energies. 2021 Jan;14(22):7782 
+
+​5. Lwin MO, Sheldenkar A, Lu J, Schulz PJ, Shin W, Panchapakesan C, et al. The Evolution of Public Sentiments During the COVID-19 Pandemic: Case Comparisons of India, Singapore, South Korea, the United Kingdom, and the United States. JMIR Infodemiology. 2022 Feb 10;2(1):e31473. 
+
+​6. Storey VC, O’Leary DE. Text Analysis of Evolving Emotions and Sentiments in COVID-19 Twitter Communication. Cogn Comput [Internet]. 2022 Jul 28 [cited 2022 Nov 7]; Available from: https://doi.org/10.1007/s12559-022-10025-3 
+
+​7. Aknin LB, De Neve JE, Dunn EW, Fancourt DE, Goldberg E, Helliwell JF, et al. Mental Health During the First Year of the COVID-19 Pandemic: A Review and Recommendations for Moving Forward. Perspect Psychol Sci. 2022 Jul 1;17(4):915–36. 
+
+​8. Ashraf BN. Economic impact of government interventions during the COVID-19 pandemic: International evidence from financial markets. Journal of Behavioral and Experimental Finance. 2020 Sep 1;27:100371. 
+
+​9. Ashraf BN. Stock markets’ reaction to COVID-19: Cases or fatalities? Research in International Business and Finance. 2020 Dec 1;54:101249. 
+
+​10. Castaldelli-Maia JM, Marziali ME, Lu Z, Martins SS. Investigating the effect of national government physical distancing measures on depression and anxiety during the COVID-19 pandemic through meta-analysis and meta-regression. Psychol Med. 2021 Apr;51(6):881–93. 
+
+​11. Venter ZS, Aunan K, Chowdhury S, Lelieveld J. COVID-19 lockdowns cause global air pollution declines. Proc Natl Acad Sci U S A. 2020 Aug 11;117(32):18984–90. 
+
+​12. Altan A. Emotional effect of the Covid-19 pandemic on oral surgery procedures: a social media analysis. J Dent Anesth Pain Med. 2021 Jun;21(3):237–44. 
+
+​13. Altan H, Coşgun A. Analysis of tweets on toothache during the COVID-19 pandemic using the CrystalFeel algorithm: a cross-sectional study. BMC Oral Health. 2021 Aug 25;21(1):418. 
+
+​14. Garcia K, Berton L. Topic detection and sentiment analysis in Twitter content related to COVID-19 from Brazil and the USA. Applied Soft Computing. 2021 Mar 1;101:107057. 
+
+​15. Mahdikhani M. Predicting the popularity of tweets by analyzing public opinion and emotions in different stages of Covid-19 pandemic. International Journal of Information Management Data Insights. 2022 Apr 1;2(1):100053. 
+
+​16. Gupta RK, Vishwanath A, Yang Y. COVID-19 Twitter Dataset with Latent Topics, Sentiments and Emotions Attributes [Internet]. ICPSR - Interuniversity Consortium for Political and Social Research. 2022 [cited 2023 Mar 13]. Available from: https://www.openicpsr.org/openicpsr/project/120321/version/V12/view DOI: 10.3886/E120321V12. 
+
+​17. Berry I, O’Neill M, Sturrock SL, Wright JE, Acharya K, Brankston G, et al. A sub-national real-time epidemiological and vaccination database for the COVID-19 pandemic in Canada. Sci Data. 2021 Jul 15;8(1):173. 
+
+​18. Beland LP, Brodeur A, Mikola D, Wright T. The short-term economic consequences of COVID-19: Occupation tasks and mental health in Canada. Canadian Journal of Economics/Revue canadienne d’économique. 2022;55(S1):214–47. 
+
+​19. Brankston G, Merkley E, Loewen PJ, Avery BP, Carson CA, Dougherty BP, et al. Pandemic fatigue or enduring precautionary behaviours? Canadians’ long-term response to COVID-19 public health measures. Prev Med Rep. 2022 Sep 19;30:101993. 
+
+​20. Lee Y, Lui LMW, Chen-Li D, Liao Y, Mansur RB, Brietzke E, et al. Government response moderates the mental health impact of COVID-19: A systematic review and meta-analysis of depression outcomes across countries. J Affect Disord. 2021 Jul 1;290:364–77. 
