@@ -1,7 +1,7 @@
 # The Emotional Response to COVID-19 Pandemic Lockdowns in Canadians: A Twitter Sentiment Analysis Study 
-## Amanda J. Wintink, Francesco Zaffino, & Winnie Zhang
-### University of Guelph-Humber, Toronto, ON, Canada
-#### University of Guelph, Guelph, ON, Canad
+### Amanda J. Wintink, Francesco Zaffino, & Winnie Zhang
+#### University of Guelph-Humber, Toronto, ON, Canada
+#### University of Guelph, Guelph, ON, Canada
  
 
 ## Introduction 
